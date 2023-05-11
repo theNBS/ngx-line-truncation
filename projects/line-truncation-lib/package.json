@@ -1,7 +1,12 @@
 {
-  "name": "ngx-line-truncation",
-  "version": "1.9.1",
+  "name": "@nbs/ngx-line-truncation",
+  "version": "1.9.2",
   "description": "Ngx Line Truncation is line truncation implementation for Angular that truncate text by user defined line number.",
+  "scripts": {
+    "post-nbs-publish": "sed -i 's/@nbs:registry=https:/@nbs:registry=http:/g' ~/.npmrc && npm run update-version-history-reminder --silent",
+    "pre-nbs-publish": "sed -i 's/@nbs:registry=http:/@nbs:registry=https:/g' ~/.npmrc",
+    "nbs-publish": "npm run pre-nbs-publish && npm publish && npm run post-nbs-publish"
+  },
   "keywords": [
     "ellipsis",
     "truncation",
@@ -21,8 +26,8 @@
     "url": "https://github.com/DiZhou92/ngx-line-truncation"
   },
   "peerDependencies": {
-    "@angular/common": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0",
-    "@angular/core": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0"
+    "@angular/common": ">=10",
+    "@angular/core": ">=10"
   },
   "dependencies": {
     "line-truncation": "^1.3.9",

@@ -1,5 +1,5 @@
 {
-  "name": "ngx-line-truncation",
+  "name": "@nbs/ngx-line-truncation",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
